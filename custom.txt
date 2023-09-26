@@ -1,0 +1,10 @@
+from enum import Enum
+
+class BookStatusEnum(str, Enum):
+    available = "available"
+    issued = "issued"
+
+class BookBase(BaseModel):
+    title: str
+    author: str
+    status: BookStatusEnum
